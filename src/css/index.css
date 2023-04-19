@@ -1,0 +1,337 @@
+::before, ::after, * {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+body header {
+  height: 100vh;
+  padding: 5px;
+  background-image: url(../assets/image1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body header nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 4em;
+  padding: 10px;
+  margin-top: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  align-items: center;
+}
+body header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin-right: 2em;
+}
+body header nav ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 2px white solid;
+}
+body header nav ul li a {
+  font-size: 18px;
+  color: #fff;
+}
+body header nav #logo {
+  width: 30%;
+  color: coral;
+  margin-left: 2em;
+  font-size: 45px;
+}
+body main {
+  width: 100%;
+}
+body main #sec_nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 4em;
+  padding: 10px;
+  margin-top: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  align-items: center;
+}
+body main #sec_nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin: auto;
+}
+body main #sec_nav ul li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 2px white solid;
+}
+body main #sec_nav ul li a {
+  font-size: 18px;
+  color: #fff;
+}
+body main #plats {
+  width: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+body main #plats h2 {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 2em;
+}
+body main #plats #i_plat {
+  width: 70%;
+  margin: auto;
+  background-image: url(../assets/i_plat/maxresdefault-2-1024x576.jpg);
+  background-size: cover;
+  height: 90vh;
+}
+body main #wwr {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-bottom: 1px solid rgb(187, 49, 49);
+}
+body main #wwr h1 {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+body main #wwr #infous {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #wwr #infous #wwr_t, body main #wwr #infous #wwr_p, body main #wwr #infous #wwr_r {
+  width: 32%;
+  height: 500px;
+  border-radius: 10px;
+  text-align: justify;
+  padding: 10px;
+}
+body main #wwr #infous #wwr_t:hover, body main #wwr #infous #wwr_p:hover, body main #wwr #infous #wwr_r:hover {
+  background-color: rgba(60, 59, 59, 0.291);
+}
+body main #wwr #infous #wwr_p h2, body main #wwr #infous #wwr_t h2 {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 0.5em;
+}
+body main #wwr #infous #wwr_p #img_rest, body main #wwr #infous #wwr_t #img_rest {
+  background-image: url(../assets/Ms/2.png);
+  background-size: cover;
+}
+body main #wwr #infous #wwr_p #img, body main #wwr #infous #wwr_t #img {
+  background-image: url(../assets/FB_IMG_15700402644652440.jpg);
+  background-size: cover;
+}
+body main #wwr #infous #wwr_p #img_team, body main #wwr #infous #wwr_t #img_team {
+  background-image: url(../assets/DSC_6715_66722bfe9004879ecff6ef80925f43b9.jpg);
+  background-size: cover;
+}
+body main #wwr #infous #wwr_p #img, body main #wwr #infous #wwr_p #img_team, body main #wwr #infous #wwr_p #img_rest, body main #wwr #infous #wwr_t #img, body main #wwr #infous #wwr_t #img_team, body main #wwr #infous #wwr_t #img_rest {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  border-radius: 100%;
+}
+body main #wwr #infous #wwr_p #memo, body main #wwr #infous #wwr_p #memo_team, body main #wwr #infous #wwr_t #memo, body main #wwr #infous #wwr_t #memo_team {
+  margin-top: 1.5em;
+}
+body main #wwr #infous #wwr_p #sign, body main #wwr #infous #wwr_t #sign {
+  width: 100%;
+  text-align: center;
+  margin-top: 4em;
+}
+body main #wwr #infous #wwr_p #sign h5, body main #wwr #infous #wwr_t #sign h5 {
+  text-decoration: underline;
+  font-size: 2opx;
+}
+body main #menu {
+  width: 70%;
+  margin: auto;
+  margin-top: 3em;
+  padding: 5px;
+  border-bottom: 1px solid rgb(187, 49, 49);
+}
+body main #menu h2 {
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+  margin: auto;
+  margin-bottom: 1.5em;
+}
+body main #menu #_menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+body main #menu #_menu #_jour, body main #menu #_menu #_nuit {
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+body main #menu #_menu #_jour h2, body main #menu #_menu #_nuit h2 {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+body main #menu #_menu #_jour table, body main #menu #_menu #_nuit table {
+  width: 100%;
+  padding: 10px;
+  border-collapse: collapse;
+}
+body main #menu #_menu #_jour table tr, body main #menu #_menu #_nuit table tr {
+  display: flex;
+  padding: 3px;
+  border-bottom: #fff 2px solid;
+  margin-bottom: 1.5em;
+  justify-content: space-around;
+  text-align: center;
+}
+body main #menu #_menu #_jour table tr th, body main #menu #_menu #_nuit table tr th {
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+body main #menu #_menu #_jour table tr td, body main #menu #_menu #_nuit table tr td {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+body main #menu #_menu #_jour:hover, body main #menu #_menu #_nuit:hover {
+  box-shadow: #fff 0px 0px 10px 0px;
+  background-color: rgba(37, 36, 36, 0.318);
+}
+body main #reservation {
+  width: 70%;
+  margin: auto;
+  height: 96vh;
+  margin-top: 4em;
+}
+body main #reservation h2 {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: 4em;
+  margin-bottom: 1.5em;
+}
+body main #reservation #for_m {
+  background-image: url(../assets/Dining.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+  z-index: 50;
+  padding: 10px;
+  border-radius: 10px;
+}
+body main #reservation #for_m form {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #reservation #for_m form input {
+  width: 30%;
+  margin: auto;
+  height: 2.2em;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  padding: 3px;
+}
+body main #reservation #for_m form label {
+  width: 30%;
+  margin: auto;
+  color: black;
+  margin-top: 1.2em;
+}
+body main #reservation #for_m form #bbt {
+  border-radius: 6px;
+  margin-top: 1em;
+}
+body main #reservation #for_m form #bbt:hover {
+  background-color: rgb(60, 59, 59);
+}
+body main #reservation #for_m:hover {
+  background-image: none;
+  background-color: rgba(34, 33, 33, 0.309);
+}
+body main #reservation #for_m:hover form label {
+  color: #fff;
+}
+body main #contact {
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(187, 49, 49);
+}
+body main #contact h2 {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2.5em;
+  margin-top: 0.5em;
+  padding: 10px;
+}
+body main #contact #cont {
+  width: 80%;
+  text-align: center;
+}
+body main #contact #cont ul {
+  list-style: none;
+}
+body main #contact #cont ul li {
+  padding: 5px;
+}
+body footer {
+  width: 100%;
+  height: 20vh;
+  padding: 10px;
+  display: flex;
+}
+body footer #social_media {
+  width: 50%;
+  margin: auto;
+  padding: 5px;
+  align-self: center;
+}
+body footer #social_media ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}/*# sourceMappingURL=index.css.map */

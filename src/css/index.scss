@@ -1,0 +1,362 @@
+::before,::after,*{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    header{
+        height: 100vh;
+        padding: 5px;
+        background-image: url(../assets/image1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        nav{
+            position: sticky;
+            top: 0;
+            height: 4em;
+            padding: 10px;
+            margin-top: 0.8em;
+            display: flex;
+            justify-content: space-between;
+            backdrop-filter: blur(10px);
+            align-items: center;
+            ul{
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                width: 45%;
+                margin-right: 2em;
+                li{
+                    list-style: none;
+                    padding: 5px;
+                    border-bottom: 2px white solid;
+                    a{
+                        font-size: 18px;
+                        color: #fff;
+                        
+                    }
+                }
+            }
+            #logo{
+                width: 30%;
+                color: coral;
+                margin-left: 2em;
+                font-size: 45px;
+            }
+        }
+    }
+    main{
+        width: 100%;
+        #sec_nav{
+            position: sticky;
+                top: 0;
+                height: 4em;
+                padding: 10px;
+                margin-top: 0.8em;
+                display: flex;
+                justify-content: space-between;
+                backdrop-filter: blur(10px);
+                align-items: center;
+            
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 45%;
+                    margin:auto;
+            
+                    li {
+                        list-style: none;
+                        padding: 5px;
+                        border-bottom: 2px white solid;
+            
+                        a {
+                            font-size: 18px;
+                            color: #fff;
+            
+                        }
+                    }
+                }
+        }
+        #plats{
+            width: 100%;
+            margin-top:5em;
+            margin-bottom: 5em;
+            h2{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 2em;
+            }
+            #i_plat{
+                width: 70%;
+                margin: auto;
+                background-image: url(../assets/i_plat/maxresdefault-2-1024x576.jpg);
+                background-size:cover;
+                height: 90vh;
+                // border-bottom: 1px solid rgb(187, 49, 49);
+            }
+        }
+        #wwr{
+            width: 80%;
+            height: 100vh;
+            margin: auto;
+            margin-bottom: 2em;
+            margin-top: 2em;
+            border-bottom: 1px solid rgb(187, 49, 49);
+            h1{
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                font-size: 40px;
+                margin-bottom: 1.5em;
+                margin-top: 1.5em;
+                
+            }
+            #infous{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                #wwr_t,#wwr_p,#wwr_r{
+                    width: 32%;
+                    height: 500px;
+                    border-radius: 10px;
+                    text-align: justify;
+                   padding: 10px; 
+                }
+                #wwr_t:hover,#wwr_p:hover,#wwr_r:hover{
+                    background-color: rgba(60, 59, 59, 0.291);
+                }
+                #wwr_p,#wwr_t{
+                    h2{
+                        width: 100%;
+                        text-align: center;
+                        padding: 5px;
+                        margin-bottom: 0.5em;
+                    }
+                    #img_rest{
+                        background-image: url(../assets/Ms/2.png);
+                        background-size: cover;
+                    }
+                    #img{
+                        background-image: url(../assets/FB_IMG_15700402644652440.jpg);
+                        background-size: cover;
+                        
+                    }
+                    #img_team{
+                        background-image: url(../assets/DSC_6715_66722bfe9004879ecff6ef80925f43b9.jpg);
+                        background-size: cover;
+
+                    }
+                    #img,#img_team,#img_rest{
+                        height: 200px;
+                        width: 200px;
+                        margin: auto;
+                        margin-bottom: 0.5em;
+                        background-color: #fff;
+                        border-radius: 100%;
+                        // background-image: url(../assets/resto-dining-table-standard.webp);
+                        // background-size:cover;
+                    }
+                    #memo,#memo_team{
+                        margin-top: 1.5em;
+                    }
+                    #sign{
+                        width: 100%;
+                        text-align: center;
+                        margin-top: 4em;
+                        h5{
+                            text-decoration: underline;
+                            font-size: 2opx;
+                        }
+                    }
+                }
+            }
+        }
+        #menu{
+            width: 70%;
+            margin: auto;
+            margin-top: 3em;
+            padding: 5px;
+            border-bottom: 1px solid rgb(187, 49, 49);
+            h2{
+                width: 50%;
+                text-align: center;
+                font-size: 30px;
+                margin: auto;
+                margin-bottom: 1.5em;
+            }
+            #_menu{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1.5em;
+                #_jour,#_nuit{
+                    border-radius: 10px;
+                    width: 50%;
+                    text-align: center;
+                    // border: #fff solid 2px;
+                    padding: 10px;
+                    h2{
+                        margin-top: 1em;
+                        margin-bottom: 2em;
+                    }
+                    table{
+                        width: 100%;
+                        padding: 10px;
+                        border-collapse: collapse;
+                        tr{
+                            display: flex;
+                            padding: 3px;
+                            border-bottom: #fff 2px solid;
+                            margin-bottom: 1.5em;
+                            justify-content: space-around;
+                            text-align: center;
+                            th{
+                                font-size: 20px;
+                                padding: 5px;
+                                margin-bottom: 5px;
+                            }
+                            td{
+                                width: 40%;
+                                margin: auto;
+                                text-align: center;
+                            }
+
+                        }
+
+                    }
+                }
+                #_jour:hover,#_nuit:hover{
+                   box-shadow: #fff 0px 0px 10px 0px;
+                    background-color: rgba(37, 36, 36, 0.318);
+                }
+
+            }
+
+        }
+        #reservation{
+            width: 70%;
+            margin: auto;
+            height: 96vh;
+            margin-top: 4em;
+            h2{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                font-size: 30px;
+                padding: 10px;
+                margin-top: 4em;
+                margin-bottom: 1.5em;
+            }
+                #for_m{
+                    background-image: url(../assets/Dining.jpg);
+                    background-size:cover;
+                    width: 100%;
+                    height: 80%;
+                    z-index: 50;
+                    padding: 10px;
+                    // display: flex;
+                    border-radius: 10px;
+                    form{
+                        margin-top: 3em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        input{
+                            width: 30%;
+                            margin: auto;
+                            height: 2.2em;
+                            border-radius: 6px;
+                            outline: none;
+                            border: none;
+                            padding: 3px;
+                        }
+                        label{
+                            width: 30%;
+                            margin: auto;
+                            color: black;
+                            margin-top: 1.2em;
+                        }
+                        #bbt{
+                            border-radius: 6px;
+                            margin-top: 1em;
+                        }
+                        #bbt:hover{
+                            background-color: rgb(60, 59, 59);
+                        }
+                    }
+                    
+                }
+                #for_m:hover{
+                    background-image: none;
+                    background-color: rgba(34, 33, 33, 0.309);
+                    form{
+                        label{
+                            color: #fff;
+                        }
+                    }
+                }
+            
+        }
+        #contact{
+            width: 70%;
+            margin: auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgb(187, 49, 49);
+            // border: #fff 2px solid;
+            h2{
+                width: 50%;
+                // border: #fff 2px solid;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 2.5em;
+                margin-top: 0.5em;
+                padding: 10px;
+            }
+            #cont{
+                width: 80%;
+                // border: #fff 2px solid;
+                text-align: center;
+                ul{
+                    list-style: none;
+                    li{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        height: 20vh;
+        padding: 10px;
+        // border: #fff 1px solid;
+        display: flex;
+        #social_media{
+            width: 50%;
+            margin: auto;
+            // border: #fff 1px solid;
+            padding: 5px;
+            align-self: center;
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                // border: #fff 1px solid;
+            }
+
+        }
+    }
+}
