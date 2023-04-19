@@ -5,7 +5,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Rubik+Mono+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+            /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap'); */
+
+        </style>
         <title>Mange Lakay Resto</title>
     </head>
 
@@ -177,19 +189,34 @@
                 <div id="for_m">
 
                     <form action="" method="get">
-                        <label for="name">Votre nom</label>
-                        <input type="text" name="name" id="name" placeholder="Jean-luc">
-                        <label for="pname">Votre prenom</label>
-                        <input type="text" name="pname" id="pname" placeholder="Adrien">
-                        <label for="per">Nombre de personne</label>
-                        <input type="number" name="per" id="per">
-                        <label for="date">Date pour votre Reservation</label>
-                        <input type="date" name="date" id="date">
-                        <label for="hr">A quelle Heure ?</label>
-                        <input type="time" name="hr" id="hr">
+                        <div id="f_line">
+
+                            <label for="name">Moi</label>
+                            <input type="text" name="name" id="name" placeholder="Jean-luc">
+                            <label for="pname">,</label>
+                            <input type="text" name="pname" id="pname" placeholder="Adrien">
+                            <label for="per">je voudrais reservee une table pour </label>
+                            <input type="number" placeholder="2" name="per" id="per">
+                        </div>
+                        <div id="s_line">
+
+                            <label for="date">dans votre restaurant pour la date </label>
+                            <input type="date" name="date" id="date">
+                            <label for="hr">a compter de </label>
+                            <input type="time" name="hr" id="hr">
+                        </div>
                         <input id="bbt" type="button" value="Confirmer">
                     </form>
                 </div>
+            </section>
+            <section id="message">
+                <h2 id="type_of_msg"></h2>
+                <div id="_message">
+                    <p id="text_msg">
+
+                    </p>
+                </div>
+
             </section>
             <section id="contact">
                 <h2>Nous Contacter & Nous Visiter</h2>
