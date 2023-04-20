@@ -115,6 +115,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", handleScroll);
   });
+  const _j = document.getElementById("_jour");
+  const _n = document.getElementById("_nuit");
+  _j.addEventListener("mouseenter", () => {
+    document.getElementById("j_").style.fontSize = "50px";
+    _j.style.width = "100%";
+    _n.style.display = "none";
+  });
+  _j.addEventListener("mouseleave", () => {
+    document.getElementById("j_").style.fontSize = "30px";
+    _n.style.display = "block";
+    _j.style.width = "50%";
+  });
+
+  _n.addEventListener("mouseenter", () => {
+    document.getElementById("n_").style.fontSize = "50px";
+    _n.style.width = "100%";
+    _j.style.display = "none";
+  });
+  _n.addEventListener("mouseleave", () => {
+    document.getElementById("n_").style.fontSize = "30px";
+    _j.style.display = "block";
+    _n.style.width = "50%";
+  });
 
   const f = document.getElementById("for_m");
   f.addEventListener("mouseenter", () => {

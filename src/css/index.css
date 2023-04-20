@@ -20,7 +20,6 @@ body header {
   background-repeat: no-repeat;
 }
 body header nav {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 6em;
@@ -63,7 +62,6 @@ body main {
   /* section menue*/
 }
 body main #sec_nav {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 4em;
@@ -268,8 +266,9 @@ body main #menu #_menu #_nuit {
 }
 body main #menu #_menu #_jour h2,
 body main #menu #_menu #_nuit h2 {
+  font-size: 30px;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 body main #menu #_menu #_jour table,
 body main #menu #_menu #_nuit table {
