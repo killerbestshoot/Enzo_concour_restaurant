@@ -2,7 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let image = document.querySelectorAll(".i"); // Récupérer l'élément image
   const header = document.querySelector("header");
   const hiddenElement = document.getElementById("sec_nav");
-
+  const _f = document.getElementById("f_line");
+  const _s = document.getElementById("s_line");
+  const _b = document.getElementById("bbt");
+  _f.style.visibility = "hidden";
+  _s.style.visibility = "hidden";
+  _b.style.visibility = "hidden";
   // changer l'affichage du nav bar
   window.addEventListener("scroll", () => {
     const headerPosition = header.getBoundingClientRect().bottom;
@@ -34,10 +39,56 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-  // récupérez la section et les éléments que vous voulez animer
+
+
+
+  const p = document.getElementById("i_plat");
+  function changeBackgroundImage() {
+    $.ajax({
+      url: "./assets/i_plat/", // chemin vers le répertoire d'images
+      success: function (data) {
+        const images = $(data)
+          .find("a:contains(.jpg), a:contains(.png),a:contains(.webp)")
+          .map(function () {
+            return $(this).attr("href");
+          })
+          .get();
+
+        // Sélectionne une image aléatoire dans le tableau
+        const imageAleatoire =
+          images[Math.floor(Math.random() * images.length)];
+        console.dir(imageAleatoire);
+
+        // Anime la transition de l'image de fond
+        anime({
+          targets: p,
+          duration: 1000,
+          easing: "easeInOutQuad",
+          scale: 1.1,
+          complete: function () {
+            p.classList.add("zoom");
+            p.style.backgroundImage = `url(${imageAleatoire})`;
+            anime({
+              targets: p,
+              duration: 4000,
+              easing: "easeInOutQuad",
+              scale: 1,
+              complete: function () {
+                p.classList.remove("zoom");
+              },
+            });
+          },
+        });
+      },
+    });
+  }
+
+  // Change l'image de fond toutes les 4 secondes
+  setInterval(changeBackgroundImage, 4000);
+
+
   var section = document.getElementById("thnks");
   const elements = document.querySelectorAll(".h2");
-
   // configurez l'animation pour chaque élément
   elements.forEach((element, index) => {
     // définissez la position initiale de l'élément
@@ -67,10 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", handleScroll);
   });
+
+  
   const f = document.getElementById("for_m");
   f.addEventListener("mouseenter", () => {
-    console.log(fm);
-
+    _f.style.visibility = "visible";
+    _b.style.visibility = "visible";
+    _s.style.visibility = "visible";
     f.style.backgroundImage = "none";
     f.style.backgroundColor = "rgba(34, 33, 33, 0.309)";
   });
@@ -82,13 +136,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const message = document.getElementById("message");
   document.getElementById("bbt").addEventListener("click", () => {
     message.classList.add("msg");
-    const c = Array[("Felicitation", "Desolee")];
-    const d = Array[("accepter", "rejeter")];
+    const c = ["Felicitation", "Desolee"];
+    const d = ["accepter", "rejeter"];
     const names = name.value;
     const pnames = pname.value;
-    const pers = pers.value;
+    const pers = per.value;
     const dates = date.value;
     const hrs = hr.value;
+    const _t = ["Message de confirmation", "Message d annulation"];
     var msgs =
       c[0] +
       "" +
@@ -100,8 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
       " a " +
       hrs +
       " est " +
-      c[1] +
+      d[0] +
       ".";
+    // console.log(msgs);
+    document.getElementById("type_of_msg").innerHTML += _t[0];
     document.getElementById("text_msg").innerHTML += msgs;
   });
 });
