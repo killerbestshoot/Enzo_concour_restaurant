@@ -1,23 +1,39 @@
 // @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap');
-::before,::after,*{
+@mixin imgcenter {
+    transform-origin: center;
+    width: 100%;
+    background-size: cover;
+}
+@mixin social_svg{
+    background-repeat: no-repeat;
+    background-size: contain;
+        background-position: center;
+}
+
+::before,
+::after,
+* {
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
     padding: 0;
 }
-body{
-    // font-family: 'Rubik Mono One', sans-serif;
+
+body {
     // font-weight: 300;
     // font-family: 'Rubik Mono One', sans-serif;
     background-color: rgb(0, 0, 0);
     color: #fff;
-    header{
+    overflow-x: hidden;
+
+    header {
         height: 100vh;
         padding: 5px;
         background-image: url(../assets/image1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        nav{
+
+        nav {
             position: sticky;
             top: 0;
             height: 6em;
@@ -27,159 +43,175 @@ body{
             justify-content: space-between;
             backdrop-filter: blur(10px);
             align-items: center;
-            ul{
+
+            ul {
                 display: flex;
-                justify-content:space-between;
+                justify-content: space-between;
                 align-items: center;
                 width: 45%;
                 margin-right: 2em;
-                li{
+
+                li {
                     list-style: none;
                     padding: 5px;
                     border-bottom: 2px white solid;
-                    a{
+
+                    a {
                         font-size: 18px;
                         color: #fff;
-                        
+
                     }
                 }
             }
-            #logo{
+
+            #logo {
                 width: 30%;
                 color: coral;
                 margin-left: 2em;
                 font-size: 35px;
                 font-weight: 700;
-                font-style:bold;
-                font-family: 'Cinzel',sans-serif;
+                font-style: bold;
+                font-family: 'Cinzel', sans-serif;
                 // font-family: 'Rampart One', cursive;
             }
         }
     }
-    main{
+
+    // section principale
+
+    main {
         width: 100%;
-        #sec_nav{
+
+        #sec_nav {
             position: sticky;
-                top: 0;
-                height: 4em;
-                padding: 10px;
-                margin-top: 0.8em;
+            top: 0;
+            height: 4em;
+            padding: 10px;
+            margin-top: 0.8em;
+            display: flex;
+            z-index: 50;
+            justify-content: space-between;
+            backdrop-filter: blur(10px);
+            align-items: center;
+
+            ul {
                 display: flex;
                 justify-content: space-between;
-                backdrop-filter: blur(10px);
                 align-items: center;
-            
-                ul {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 45%;
-                    margin:auto;
-            
-                    li {
-                        list-style: none;
-                        padding: 5px;
-                        border-bottom: 2px white solid;
-            
-                        a {
-                            font-size: 18px;
-                            color: #fff;
-            
-                        }
+                width: 45%;
+                margin: auto;
+
+                li {
+                    list-style: none;
+                    padding: 5px;
+                    border-bottom: 2px white solid;
+
+                    a {
+                        font-size: 18px;
+                        color: #fff;
+
                     }
                 }
-        }
-        #plats{
-            width: 100%;
-            margin-top:5em;
-            margin-bottom: 5em;
-            h2{
-                width: 50%;
-                margin: auto;
-                text-align: center;
-                font-size: 70px;
-                font-family: 'Great Vibes', cursive;
-                margin-bottom: 1.5em;
-            }
-            #i_plat{
-                width: 70%;
-                margin: auto;
-                background-image: url(../assets/i_plat/maxresdefault-2-1024x576.jpg);
-                background-size:cover;
-                height: 90vh;
-                // border-bottom: 1px solid rgb(187, 49, 49);
             }
         }
-        #wwr{
+        // section qui sommes nous
+        #wwr {
             width: 80%;
             height: 100vh;
             margin: auto;
             margin-bottom: 2em;
             margin-top: 2em;
             border-bottom: 1px solid rgb(187, 49, 49);
-            h1{
+
+            h1 {
                 width: 100%;
                 text-align: center;
                 padding: 10px;
                 font-size: 40px;
                 margin-bottom: 1.5em;
                 margin-top: 1.5em;
-                
+
             }
-            #infous{
+
+            #infous {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                #wwr_t,#wwr_p,#wwr_r{
+
+                #wwr_t,
+                #wwr_p,
+                #wwr_rs {
                     width: 32%;
                     height: 500px;
                     border-radius: 10px;
                     text-align: justify;
-                   padding: 10px; 
+                    padding: 10px;
                 }
-                #wwr_t:hover,#wwr_p:hover,#wwr_r:hover{
+
+                #wwr_t:hover,
+                #wwr_p:hover,
+                #wwr_rs:hover {
                     background-color: rgba(60, 59, 59, 0.291);
                 }
-                #wwr_p,#wwr_t{
-                    h2{
+
+                #wwr_p,
+                #wwr_t,
+                #wwr_rs {
+                    h2 {
                         width: 100%;
                         text-align: center;
                         padding: 5px;
                         margin-bottom: 0.5em;
                     }
-                    #img_rest{
-                        background-image: url(../assets/Ms/2.png);
-                        background-size: cover;
+
+                    #img_rest {
+                        overflow: hidden;
+
+                        #img1 {
+                            @include imgcenter;
+                        }
                     }
-                    #img{
-                        background-image: url(../assets/FB_IMG_15700402644652440.jpg);
-                        background-size: cover;
-                        
+
+                    #img {
+                        overflow: hidden;
+
+                        #img2 {
+                            @include imgcenter;
+                        }
                     }
-                    #img_team{
-                        background-image: url(../assets/DSC_6715_66722bfe9004879ecff6ef80925f43b9.jpg);
-                        background-size: cover;
+
+                    #img_team {
+                        overflow: hidden;
+
+                        #img3 {
+                            @include imgcenter;
+                        }
 
                     }
-                    #img,#img_team,#img_rest{
+
+                    #img,
+                    #img_team,
+                    #img_rest {
                         height: 200px;
                         width: 200px;
                         margin: auto;
                         margin-bottom: 0.5em;
                         background-color: #fff;
                         border-radius: 100%;
-                        // background-image: url(../assets/resto-dining-table-standard.webp);
-                        // background-size:cover;
                     }
-                    #memo,#memo_team{
+
+                    #memo,
+                    #memo_team {
                         margin-top: 1.5em;
                     }
-                    #sign{
+
+                    #sign {
                         width: 100%;
                         text-align: center;
                         margin-top: 4em;
-                        h5{
+
+                        h5 {
                             text-decoration: underline;
                             font-size: 2opx;
                         }
@@ -187,13 +219,42 @@ body{
                 }
             }
         }
-        #menu{
+/* section plats*/
+          #plats {
+              width: 100%;
+              margin-top: 5em;
+              margin-bottom: 5em;
+    
+              h2 {
+                  width: 50%;
+                  margin: auto;
+                  text-align: center;
+                  font-size: 70px;
+                  font-family: 'Great Vibes', cursive;
+                  margin-bottom: 1.5em;
+              }
+    
+              #i_plat {
+                  width: 70%;
+                  margin: auto;
+                  background-image: url(../assets/i_plat/maxresdefault-2-1024x576.jpg);
+                  background-size: cover;
+                  height: 90vh;
+                  // border-bottom: 1px solid rgb(187, 49, 49);
+              }
+          }
+
+
+/* section menue*/
+
+        #menu {
             width: 70%;
             margin: auto;
             margin-top: 3em;
             padding: 5px;
             border-bottom: 1px solid rgb(187, 49, 49);
-            h2{
+
+            h2 {
                 width: 50%;
                 text-align: center;
                 font-size: 40px;
@@ -201,39 +262,46 @@ body{
                 margin: auto;
                 margin-bottom: 1.5em;
             }
-            #_menu{
+
+            #_menu {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 1.5em;
-                #_jour,#_nuit{
+
+                #_jour,
+                #_nuit {
                     border-radius: 10px;
                     width: 50%;
                     text-align: center;
-                    // border: #fff solid 2px;
                     padding: 10px;
-                    h2{
+
+                    h2 {
                         margin-top: 1em;
                         margin-bottom: 2em;
                     }
-                    table{
+
+                    table {
                         width: 100%;
                         padding: 10px;
                         border-collapse: collapse;
-                        tr{
+
+                        tr {
                             display: flex;
                             padding: 3px;
                             border-bottom: #fff 2px solid;
                             margin-bottom: 1.5em;
                             justify-content: space-around;
                             text-align: center;
-                            th{
+
+                            th {
                                 font-size: 20px;
                                 padding: 5px;
                                 margin-bottom: 5px;
                             }
-                            td{
+
+                            td {
                                 width: 40%;
                                 margin: auto;
                                 text-align: center;
@@ -243,21 +311,28 @@ body{
 
                     }
                 }
-                #_jour:hover,#_nuit:hover{
+
+                #_jour:hover,
+                #_nuit:hover {
                     cursor: pointer;
-                   box-shadow: #fff 0px 0px 10px 0px;
-                   background-color: rgba(37, 36, 36, 0.318);
+                    box-shadow: #fff 0px 0px 10px 0px;
+                    background-color: rgba(37, 36, 36, 0.318);
                 }
-                
+
             }
-            
+
         }
-        #reservation{
+
+// section reservation
+        #reservation {
             width: 70%;
             margin: auto;
             height: 96vh;
+            align-items: center;
             margin-top: 4em;
-            h2{
+            border-bottom: 1px solid rgb(187, 49, 49);
+
+            h2 {
                 font-family: 'Great Vibes';
                 width: 50%;
                 margin: auto;
@@ -267,75 +342,131 @@ body{
                 margin-top: 4em;
                 margin-bottom: 1.5em;
             }
-                #for_m{
-                    background-image: url(../assets/Dining.jpg);
-                    background-size:cover;
-                    width: 100%;
-                    height: 80%;
-                    z-index: 50;
-                    padding: 10px;
-                    // display: flex;
-                    border-radius: 10px;
-                    form{
-                        margin-top: 3em;
-                        display: flex;
-                        align-items: center;
-                        flex-direction: column;
-                        justify-content: center;
-                        input{
-                            // width: 30%;
-                            // margin: auto;
-                            height: 2.2em;
-                            border-radius: 6px;
-                            outline: none;
-                            border: none;
-                            padding: 3px;
-                            color: #fff;
-                            background-color: rgba(46, 45, 45, 0.298);
-                        }
-                        #f_line{
-                            margin: auto;
-                            width: 95%;
-                            margin-top: 8em;
-                        }
-                        #s_line{
-                            margin: auto;
-                            width: 95%;
-                            margin-top: 0.8em;
-                        }
-                        label{
-                            // width: 30%;
-                            // margin: auto;
-                            font-size: 18px;
-                            margin-top: 3px;
-                            padding: 5px;
-                            color: black;
-                            // margin-top: 1.2em;
-                        }
-                        #bbt{
-                            width: 150px;
-                            margin: 7px;
-                            border-radius: 6px;
-                            margin-top: 1.8em;
-                        }
-                        #bbt:hover{
-                            background-color: rgb(60, 59, 59);
-                        }
+
+            #for_m {
+                background-image: url(../assets/Dining.jpg);
+                background-size: cover;
+                width: 100%;
+                height: 80%;
+                z-index: 50;
+                padding: 10px;
+                border-radius: 10px;
+                form{
+                    visibility: hidden;
+                }
+
+                form {
+
+                    margin-top: 3em;
+                    margin-bottom: 3em;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    input {
+                        height: 2.2em;
+                        border-radius: 6px;
+                        outline: none;
+                        border: none;
+                        padding: 1px;
+                        color: #fff;
+                        background-color: rgba(46, 45, 45, 0.298);
+                        font-size: 20px;
+                        font-family: 'Great Vibes';
                     }
+
+                    #f_line {
+                        margin: auto;
+                        width: 95%;
+                        margin-top: 8em;
+                    }
+
+                    #s_line {
+                        margin: auto;
+                        width: 95%;
+                        margin-top: 0.8em;
+                    }
+
+                    label {
+                        font-family: 'Great Vibes';
+                        font-size: 25px;
+                        padding: 5px;
+                        color: black;
+                    }
+
+                    #bbt {
+                        width: 150px;
+                        margin: 7px;
+                        border-radius: 6px;
+                        margin-top: 1.8em;
+                        font-family: 'Great Vibes';
+                        font-size: 30px;
+                    }
+
+                    #bbt:hover {
+                        background-color: rgb(60, 59, 59);
+                    }
+                }
+                
+            }
+
+            #for_m:hover {
+                background-image: none;
+                background-color: rgba(34, 33, 33, 0.309);
+
+                form {
+                    visibility:visible;
                     
-                }
-                #for_m:hover{
-                    background-image: none;
-                    background-color: rgba(34, 33, 33, 0.309);
-                    form{
-                        label{
-                            color: #fff;
-                        }
+                    label {
+                        color: #fff;
                     }
                 }
-            
+            }
+
         }
-        #contact{
+        .msg{
+            width: 70%;
+            height: 100vh;
+            border-top: 1px solid rgb(187, 49, 49);
+            #type_of_msg{
+                width: 50%;
+                margin: auto;
+                font-size: 30px;
+                font-family: 'Great Vibes';
+            }
+            #_message{
+                width: 80%;
+                padding: 5px;
+                #text_msg{
+                    width: 90%;
+                    text-align: center;
+                }
+            }
+
+        }
+
+        #thnks {
+            width: 100%;
+            margin-top: 5em;
+            height: 100vh;
+            padding: 10px;
+            display: grid;
+
+            h2 {
+                width:50%;
+                // display: none;
+                position:relative;
+                // right: -110%;
+                // translate: X -220px;
+                padding: 5px;
+                font-size: 6em;
+                font-family: 'Rubik Mono One', sans-serif;
+
+            }
+        }
+
+        #contact {
             width: 70%;
             margin: auto;
             height: 100vh;
@@ -344,47 +475,83 @@ body{
             justify-content: center;
             align-items: center;
             border-bottom: 1px solid rgb(187, 49, 49);
-            // border: #fff 2px solid;
-            h2{
+            border-top: 1px solid rgb(187, 49, 49);
+            h2 {
                 width: 50%;
-                // border: #fff 2px solid;
                 text-align: center;
                 margin: auto;
+                font-size: 50px;
+                font-family: 'Great Vibes';
                 margin-bottom: 2.5em;
                 margin-top: 0.5em;
                 padding: 10px;
             }
-            #cont{
+
+            #cont {
                 width: 80%;
                 // border: #fff 2px solid;
                 text-align: center;
-                ul{
+                
+                ul {
                     list-style: none;
-                    li{
+
+                    li {
                         padding: 5px;
                     }
                 }
             }
         }
     }
-    footer{
+
+    footer {
         width: 100%;
         height: 20vh;
-        padding: 10px;
+        padding: 5px;
         // border: #fff 1px solid;
         display: flex;
-        #social_media{
-            width: 50%;
+
+        #social_media {
+            width: 25%;
+            height: 7em;
             margin: auto;
-            // border: #fff 1px solid;
             padding: 5px;
             align-self: center;
-            ul{
+
+            ul {
                 width: 100%;
+                height: 90%;
+                margin: auto;
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 list-style: none;
-                // border: #fff 1px solid;
+                li {
+                    width: calc(100%/3);
+                    height: 95%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        width: 50%;
+                        height: 50%;
+                    }
+                    
+                    #_twt {
+                        background-image: url(../assets/twitter-3-logo-svgrepo-com.svg);
+                     @include social_svg;
+                    }
+                    
+                    #_inst {
+                        @include social_svg;
+                        background-image: url(../assets/instagram-color-svgrepo-com.svg);
+                    }
+                    
+                    #_tik {
+                        @include social_svg;
+                        background-image: url(../assets/tiktok-logo-logo-svgrepo-com.svg);
+                    }
+                }
             }
 
         }

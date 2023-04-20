@@ -18,6 +18,8 @@
             /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap'); */
 
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
         <title>Mange Lakay Resto</title>
     </head>
 
@@ -48,9 +50,11 @@
                 <h1>Qui Sommes nous ?</h1>
                 <div id="infous">
 
-                    <div id="wwr_t">
+                    <!-- partie preswntation restaurant -->
+                    <div id="wwr_rs">
                         <h2>Mange Lakay</h2>
                         <div id="img_rest">
+                            <img class="i" id="img1" src="./assets/Ms/2.png" alt="" srcset="">
                         </div>
                         <p>Nous sommes un petit restaurant qui désire conserver la cuisine haïtienne à travers notre
                             façon de faire. Nos plats sont
@@ -61,13 +65,15 @@
                             autre. Nous proposons deux menus que nous vous invitons à <a href="http://">decouvrir</a>.
                             Nous vous remercions d'avance de votre confiance.</p>
                     </div>
+
+                    <!-- partie presentation pdg -->
                     <div id="wwr_p">
                         <h2>
                             Bastien Yvenord
                         </h2>
                         <div id="presentation">
                             <div id="img">
-
+                                <img class="i" id="img2" src="./assets/FB_IMG_15700402644652440.jpg" alt="" srcset="">
                             </div>
                             <div id="memo">
                                 <p> A commencé sa carrière dans le monde de la cuisine il y a environ vingt ans en tant
@@ -76,20 +82,22 @@
                                     jeune âge, il a rapidement gravi les
                                     échelons en travaillant dur et en développant ses compétences culinaires et de
                                     gestion.<br>
-
-
                                 </p>
                             </div>
                             <div id="sign">
                                 <h5>Bastien Jean Nance Yvenord</h5>
-
                             </div>
                         </div>
                     </div>
+
+                    <!-- partie presentation equipe -->
                     <div id="wwr_t">
                         <h2>Notre Equipe</h2>
                         <div id="presentation_t">
-                            <div id="img_team"></div>
+                            <div id="img_team">
+                                <img class="i" id="img3" src="./assets/DSC_6715_66722bfe9004879ecff6ef80925f43b9.jpg"
+                                    alt="" srcset="">
+                            </div>
                             <div id="memo_team">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptatum dolores fugit
                                     quos delectus eum dignissimos similique fugiat consequuntur. In, necessitatibus
@@ -104,12 +112,18 @@
                     </div>
                 </div>
             </section>
+
+
+            <!-- section presentation de nos plats -->
+
             <section id="plats">
                 <h2>Nos Plats sur commandes</h2>
                 <div id="i_plat">
 
                 </div>
             </section>
+
+            <!-- pnotre menue de plats -->
 
             <section id="menu">
                 <h2>!hmmm Voici Notre Menu</h2>
@@ -182,6 +196,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- section reservation -->
             <section id="reservation">
                 <div>
                     <h2>Faite votre Reservation</h2>
@@ -200,12 +216,12 @@
                         </div>
                         <div id="s_line">
 
-                            <label for="date">dans votre restaurant pour la date </label>
+                            <label for="date">personne (s) dans votre restaurant pour la date </label>
                             <input type="date" name="date" id="date">
                             <label for="hr">a compter de </label>
                             <input type="time" name="hr" id="hr">
                         </div>
-                        <input id="bbt" type="button" value="Confirmer">
+                        <input id="bbt" type="button" value="Je confirme">
                     </form>
                 </div>
             </section>
@@ -217,6 +233,13 @@
                     </p>
                 </div>
 
+            </section>
+            <section id="thnks">
+                <h2 class="h2" > Merci </h2>
+                <h2 class="h2"> d'avoir </h2>
+                <h2 class="h2"> Visiter</h2>
+                <h2 class="h2"> notre</h2>
+                <h2 class="h2"> page.</h2>
             </section>
             <section id="contact">
                 <h2>Nous Contacter & Nous Visiter</h2>
@@ -236,13 +259,13 @@
         <footer>
             <div id="social_media">
                 <ul>
-                    <li>Twiter</li>
-                    <li>Instagram</li>
-                    <li>Tiktok</li>
+                    <li><a id="_twt" href="https://twitter.com"></a></li>
+                    <li><a id="_inst" href="https://instagram.com"></a></li>
+                    <li><a id="_tik" href="https://tiktok.com"></a></li>
                 </ul>
             </div>
         </footer>
-
+        <script src="./js/index.js"></script>
     </body>
 
 </html>
