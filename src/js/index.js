@@ -35,12 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         targets: img,
         scale: 1, // Remettre l'image à sa taille d'origine
         duration: 900, // La durée de l'animation en millisecondes
-        easing: "easeOutQuad", // L'effet d'animation
+        easing: "easeInOutQuad", // L'effet d'animation
       });
     });
   });
-
-
 
   const p = document.getElementById("i_plat");
   function changeBackgroundImage() {
@@ -57,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Sélectionne une image aléatoire dans le tableau
         const imageAleatoire =
           images[Math.floor(Math.random() * images.length)];
-        console.dir(imageAleatoire);
+        // console.dir(imageAleatoire);
 
         // Anime la transition de l'image de fond
         anime({
@@ -67,10 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
           scale: 1.1,
           complete: function () {
             p.classList.add("zoom");
-            p.style.backgroundImage = `url(${imageAleatoire})`;
+            p.style.backgroundImage = `url(./assets/i_plat/${imageAleatoire})`;
             anime({
               targets: p,
-              duration: 4000,
+              duration: 1000,
               easing: "easeInOutQuad",
               scale: 1,
               complete: function () {
@@ -83,9 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Change l'image de fond toutes les 4 secondes
-  setInterval(changeBackgroundImage, 4000);
-
+  // Change l'image de fond toutes les 3 secondes
+  setInterval(changeBackgroundImage, 3000);
 
   var section = document.getElementById("thnks");
   const elements = document.querySelectorAll(".h2");
@@ -119,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll);
   });
 
-  
   const f = document.getElementById("for_m");
   f.addEventListener("mouseenter", () => {
     _f.style.visibility = "visible";

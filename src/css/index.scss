@@ -224,7 +224,8 @@ body {
 
         /* section plats*/
         #plats {
-            width: 100%;
+            width: 70%;
+            margin: auto;
             margin-top: 5em;
             margin-bottom: 5em;
 
@@ -238,9 +239,8 @@ body {
             }
 
             #p_p {
-                width: 70%;
+                width: 100%;
                 overflow: hidden;
-                margin: auto;
 
                 #i_plat {
                     width: 100%;

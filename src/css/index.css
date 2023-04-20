@@ -210,7 +210,8 @@ body main #wwr #infous #wwr_rs #sign h5 {
   font-size: 2opx;
 }
 body main #plats {
-  width: 100%;
+  width: 70%;
+  margin: auto;
   margin-top: 5em;
   margin-bottom: 5em;
 }
@@ -223,9 +224,8 @@ body main #plats h2 {
   margin-bottom: 1.5em;
 }
 body main #plats #p_p {
-  width: 70%;
+  width: 100%;
   overflow: hidden;
-  margin: auto;
 }
 body main #plats #p_p #i_plat {
   width: 100%;
