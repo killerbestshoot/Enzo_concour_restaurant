@@ -323,7 +323,7 @@ body main #reservation #for_m {
   padding: 10px;
   border-radius: 10px;
 }
-body main #reservation #for_m form {
+body main #reservation #for_m .hide {
   visibility: hidden;
 }
 body main #reservation #for_m form {
@@ -359,7 +359,7 @@ body main #reservation #for_m form label {
   font-family: "Great Vibes";
   font-size: 25px;
   padding: 5px;
-  color: black;
+  color: rgb(250, 250, 250);
 }
 body main #reservation #for_m form #bbt {
   width: 150px;
@@ -372,24 +372,17 @@ body main #reservation #for_m form #bbt {
 body main #reservation #for_m form #bbt:hover {
   background-color: rgb(60, 59, 59);
 }
-body main #reservation #for_m:hover {
-  background-image: none;
-  background-color: rgba(34, 33, 33, 0.309);
-}
-body main #reservation #for_m:hover form {
-  visibility: visible;
-}
-body main #reservation #for_m:hover form label {
-  color: #fff;
-}
 body main .msg {
   width: 70%;
+  margin: auto;
+  margin-top: 2em;
   height: 100vh;
   border-top: 1px solid rgb(187, 49, 49);
 }
 body main .msg #type_of_msg {
   width: 50%;
   margin: auto;
+  margin-top: 0.5em;
   font-size: 30px;
   font-family: "Great Vibes";
 }

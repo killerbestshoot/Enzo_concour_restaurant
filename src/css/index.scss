@@ -351,12 +351,10 @@ body {
                 z-index: 50;
                 padding: 10px;
                 border-radius: 10px;
-                form{
+                .hide{
                     visibility: hidden;
                 }
-
                 form {
-
                     margin-top: 3em;
                     margin-bottom: 3em;
                     display: flex;
@@ -392,7 +390,7 @@ body {
                         font-family: 'Great Vibes';
                         font-size: 25px;
                         padding: 5px;
-                        color: black;
+                        color: rgb(250, 250, 250);
                     }
 
                     #bbt {
@@ -410,28 +408,17 @@ body {
                 }
                 
             }
-
-            #for_m:hover {
-                background-image: none;
-                background-color: rgba(34, 33, 33, 0.309);
-
-                form {
-                    visibility:visible;
-                    
-                    label {
-                        color: #fff;
-                    }
-                }
-            }
-
         }
         .msg{
             width: 70%;
+            margin: auto;
+            margin-top: 2em;
             height: 100vh;
             border-top: 1px solid rgb(187, 49, 49);
             #type_of_msg{
                 width: 50%;
                 margin: auto;
+                margin-top: 0.5em;
                 font-size: 30px;
                 font-family: 'Great Vibes';
             }

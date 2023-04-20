@@ -67,4 +67,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", handleScroll);
   });
+  const f = document.getElementById("for_m");
+  f.addEventListener("mouseenter", () => {
+    console.log(fm);
+
+    f.style.backgroundImage = "none";
+    f.style.backgroundColor = "rgba(34, 33, 33, 0.309)";
+  });
+  const name = document.getElementById("name");
+  const pname = document.getElementById("pname");
+  const per = document.getElementById("per");
+  const date = document.getElementById("date");
+  const hr = document.getElementById("hr");
+  const message = document.getElementById("message");
+  document.getElementById("bbt").addEventListener("click", () => {
+    message.classList.add("msg");
+    const c = Array[("Felicitation", "Desolee")];
+    const d = Array[("accepter", "rejeter")];
+    const names = name.value;
+    const pnames = pname.value;
+    const pers = pers.value;
+    const dates = date.value;
+    const hrs = hr.value;
+    var msgs =
+      c[0] +
+      "" +
+      names +
+      " " +
+      pnames +
+      " votre reservation pour la date " +
+      dates +
+      " a " +
+      hrs +
+      " est " +
+      c[1] +
+      ".";
+    document.getElementById("text_msg").innerHTML += msgs;
+  });
 });
