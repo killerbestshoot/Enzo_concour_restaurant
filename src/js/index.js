@@ -115,6 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", handleScroll);
   });
+
+  // evenement sur les menue jour et nuit
   const _j = document.getElementById("_jour");
   const _n = document.getElementById("_nuit");
   _j.addEventListener("mouseenter", () => {
@@ -153,31 +155,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const date = document.getElementById("date");
   const hr = document.getElementById("hr");
   const message = document.getElementById("message");
-  document.getElementById("bbt").addEventListener("click", () => {
-    message.classList.add("msg");
-    const c = ["Felicitation", "Desolee"];
-    const d = ["accepter", "rejeter"];
+
+  //capture de l'evenrment du formulaire
+  document.getElementById("bbt").addEventListener("click", (event) => {
+    // Empêcher la soumission par défaut du formulaire
+    event.preventDefault();
+
+    // Créer le message de confirmation ou d'annulation en fonction de l'état de la réservation
     const names = name.value;
     const pnames = pname.value;
     const pers = per.value;
     const dates = date.value;
     const hrs = hr.value;
-    const _t = ["Message de confirmation", "Message d annulation"];
-    var msgs =
+    const d = ["acceptée", "rejetée"];
+    const c = ["Félicitations", "Désolé"];
+    const _t = ["Message de confirmation", "Message d'annulation"];
+    const msg =
       c[0] +
-      "" +
+      " " +
       names +
       " " +
       pnames +
-      " votre reservation pour la date " +
+      ", votre réservation d'une table pour " +
+      pers +
+      " a la date " +
       dates +
-      " a " +
+      " à " +
       hrs +
-      " est " +
+      " a été " +
       d[0] +
       ".";
-    // console.log(msgs);
-    document.getElementById("type_of_msg").innerHTML += _t[0];
-    document.getElementById("text_msg").innerHTML += msgs;
+
+    // Afficher le message dans la section "message"
+    const typeOfMsgElement = document.getElementById("type_of_msg");
+    const textMsgElement = document.getElementById("text_msg");
+    typeOfMsgElement.innerHTML = _t[0];
+    textMsgElement.innerHTML = msg;
+    message.classList.add("msg");
+
+    // Faire défiler la section "message" dans la vue
+    message.scrollIntoView({ behavior: "smooth" });
   });
 });
