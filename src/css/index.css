@@ -412,6 +412,7 @@ body main #thnks {
   height: 100vh;
   padding: 10px;
   display: grid;
+  overflow: -moz-hidden-unscrollable;
   background-image: url(../assets/aa7d3f_e5c6a0f393fa453cba375d4d3d47bdef~mv2.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -419,7 +420,6 @@ body main #thnks {
 body main #thnks h2 {
   width: 50%;
   position: relative;
-  color: rgb(187, 49, 49);
   color: rgb(0, 0, 0);
   padding: 5px;
   font-size: 6em;
@@ -506,7 +506,7 @@ body footer #social_media ul li #_tik {
   background-position: center;
   background-image: url(../assets/tiktok-logo-logo-svgrepo-com.svg);
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 950px) {
   body header {
     width: 100%;
     height: 100vh;
@@ -544,6 +544,7 @@ body footer #social_media ul li #_tik {
     justify-content: center;
     height: 50vh;
     width: 100%;
+    max-width: 700px;
     margin: auto;
     padding-top: 10px;
     padding-bottom: 30px;
@@ -583,6 +584,7 @@ body footer #social_media ul li #_tik {
     justify-content: center;
     height: 50vh;
     width: 100%;
+    max-width: 700px;
     margin: auto;
     padding-top: 10px;
     padding-bottom: 30px;
@@ -709,8 +711,69 @@ body footer #social_media ul li #_tik {
     display: block;
     width: 100%;
   }
-  body main #menu #_menu #_jour, body main #menu #_menu #_nuit {
+  body main #menu #_menu #_jour,
+  body main #menu #_menu #_nuit {
     width: inherit;
+    margin-bottom: 2em;
     border-bottom: 1px solid #c83131;
+  }
+  body main #reservation {
+    width: 95%;
+    display: block;
+    height: auto;
+  }
+  body main #reservation div {
+    width: 100%;
+  }
+  body main #reservation div h2 {
+    text-align: center;
+    width: 100%;
+  }
+  body main #reservation #for_m {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  body main #reservation #for_m form {
+    width: 100%;
+    display: block;
+  }
+  body main #reservation #for_m form #f_line, body main #reservation #for_m form #s_line {
+    display: block;
+    width: 100%;
+  }
+  body main #reservation #for_m form #f_line label, body main #reservation #for_m form #s_line label {
+    font-size: 20px;
+    width: 100%;
+    padding-top: 0.9em;
+  }
+  body main #reservation #for_m form #f_line input, body main #reservation #for_m form #s_line input {
+    width: inherit;
+    width: 100%;
+  }
+  body main #reservation #for_m form #bbt {
+    width: 95%;
+  }
+  body main #thnks {
+    width: 100%;
+  }
+  body main #thnks h2 {
+    font-size: 50px;
+  }
+  body main #contact {
+    width: 95%;
+    margin: auto;
+  }
+  body main #contact h2 {
+    width: 100%;
+    font-size: 35px;
+  }
+  body main #contact #cont {
+    width: 85%;
+  }
+  body footer {
+    width: 100%;
+  }
+  body footer #social_media {
+    width: 60%;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -2,12 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let image = document.querySelectorAll(".i"); // Récupérer l'élément image
   const header = document.querySelector("header");
   const hiddenElement = document.getElementById("sec_nav");
-  const _f = document.getElementById("f_line");
-  const _s = document.getElementById("s_line");
-  const _b = document.getElementById("bbt");
-  _f.style.visibility = "hidden";
-  _s.style.visibility = "hidden";
-  _b.style.visibility = "hidden";
+  document.getElementById("f_line").style.visibility = "hidden";
+  document.getElementById("s_line").style.visibility = "hidden";
+  document.getElementById("bbt").style.visibility = "hidden";
+
   // changer l'affichage du nav bar
   window.addEventListener("scroll", () => {
     const headerPosition = header.getBoundingClientRect().bottom;
@@ -46,7 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
       url: "./assets/i_plat/", // chemin vers le répertoire d'images
       success: function (data) {
         const images = $(data)
-          .find("a:contains(.jpg), a:contains(.png),a:contains(.webp)")
+          .find(
+            "a:contains(.jpg), a:contains(.png),a:contains(.webp),a:contains(.jpeg)"
+          )
           .map(function () {
             return $(this).attr("href");
           })
@@ -86,30 +86,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var section = document.getElementById("thnks");
   const elements = document.querySelectorAll(".h2");
+  let _width = window.innerWidth;
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+  const sectionMiddle = sectionTop + sectionHeight / 2;
+
   // configurez l'animation pour chaque élément
   elements.forEach((element, index) => {
-    // définissez la position initiale de l'élément
-    element.style.transform = "translateX(200%)";
-    // créez l'animation
-    const animation = anime({
-      targets: element,
-      translateX: 0,
-      duration: 1000,
-      easing: "easeOutQuad",
-      autoplay: false,
-      delay: index * 500, // ajoutez un délai croissant à chaque élément
-    });
+    if (_width > 950) {
+      // définissez la position initiale de l'élément
+      element.style.transform = "translateX(200%)";
+      // créez l'animation
+      const animation = anime({
+        targets: element,
+        translateX: 0,
+        duration: 1000,
+        easing: "easeOutQuad",
+        autoplay: false,
+        delay: index * 500, // ajoutez un délai croissant à chaque élément
+      });
 
-    // déclenchez l'animation lorsque la section est visible à mi-page
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionMiddle = sectionTop + sectionHeight / 2;
+      // déclenchez l'animation lorsque la section est visible à mi-page
+      function handleScroll() {
+        const scrollPosition = window.pageYOffset + window.innerHeight;
+        if (scrollPosition > sectionMiddle) {
+          animation.play();
+          window.removeEventListener("scroll", handleScroll); // supprimez l'écouteur d'événement
+        }
+      }
+    } else {
+      // définissez la position initiale de l'élément
+      element.style.transform = "translateY(200%)";
+      // créez l'animation
+      const animation = anime({
+        targets: element,
+        translateY: 0,
+        duration: 1000,
+        easing: "easeOutQuad",
+        autoplay: false,
+        delay: index * 500, // ajoutez un délai croissant à chaque élément
+      });
 
-    function handleScroll() {
-      const scrollPosition = window.pageYOffset + window.innerHeight;
-      if (scrollPosition > sectionMiddle) {
-        animation.play();
-        window.removeEventListener("scroll", handleScroll); // supprimez l'écouteur d'événement
+      // déclenchez l'animation lorsque la section est visible à mi-page
+      function handleScroll() {
+        const scrollPosition = window.pageYOffset + window.innerHeight;
+        if (scrollPosition > sectionMiddle) {
+          animation.play();
+          window.removeEventListener("scroll", handleScroll); // supprimez l'écouteur d'événement
+        }
       }
     }
 
@@ -123,28 +147,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Define the event handler functions
   function handleJourMouseEnter() {
-    // console.log(width_);
-    document.getElementById("j_").style.fontSize = "50px";
-    _j.style.width = "100%";
-    _n.style.display = "none";
+    setTimeout(() => {
+      document.getElementById("j_").style.fontSize = "50px";
+      _j.style.width = "100%";
+      _n.style.display = "none";
+    }, 900);
   }
 
   function handleJourMouseLeave() {
-    document.getElementById("j_").style.fontSize = "30px";
-    _n.style.display = "block";
-    _j.style.width = "50%";
+    setTimeout(() => {
+      document.getElementById("j_").style.fontSize = "30px";
+      _n.style.display = "block";
+      _j.style.width = "50%";
+    }, 400);
   }
 
   function handleNuitMouseEnter() {
-    document.getElementById("n_").style.fontSize = "50px";
-    _n.style.width = "100%";
-    _j.style.display = "none";
+    setTimeout(() => {
+      document.getElementById("n_").style.fontSize = "50px";
+      _n.style.width = "100%";
+      _j.style.display = "none";
+    }, 900);
   }
 
   function handleNuitMouseLeave() {
-    document.getElementById("n_").style.fontSize = "30px";
-    _j.style.display = "block";
-    _n.style.width = "50%";
+    setTimeout(() => {
+      document.getElementById("n_").style.fontSize = "30px";
+      _j.style.display = "block";
+      _n.style.width = "50%";
+    }, 400);
   }
 
   function toggleEventListeners() {
@@ -154,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set a new timeout to call the function after 250ms
     resizeTimer = setTimeout(function () {
       let width_ = window.innerWidth;
-      if (width_ > 700) {
+      if (width_ > 950) {
         // add event listeners and modify element styles
         _j.addEventListener("mouseenter", handleJourMouseEnter);
         _j.addEventListener("mouseleave", handleJourMouseLeave);
@@ -178,9 +209,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const f = document.getElementById("for_m");
   f.addEventListener("mouseenter", () => {
-    _f.style.visibility = "visible";
-    _b.style.visibility = "visible";
-    _s.style.visibility = "visible";
+    document.getElementById("f_line").style.visibility = "visible";
+    document.getElementById("s_line").style.visibility = "visible";
+    document.getElementById("bbt").style.visibility = "visible";
     f.style.backgroundImage = "none";
     f.style.backgroundColor = "rgba(34, 33, 33, 0.309)";
   });

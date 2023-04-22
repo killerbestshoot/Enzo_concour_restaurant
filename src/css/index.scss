@@ -468,6 +468,7 @@ body {
             height: 100vh;
             padding: 10px;
             display: grid;
+            overflow:-moz-hidden-unscrollable;
             // background-image: url(../assets/960x0.jpg);
             background-image: url(../assets/aa7d3f_e5c6a0f393fa453cba375d4d3d47bdef~mv2.webp);
             background-repeat: no-repeat;
@@ -477,8 +478,8 @@ body {
                 width: 50%;
                 // display: none;
                 position: relative;
-                color: rgb(187,49,49);
-                color: rgb(0,0,0);
+                // color: rgb(187, 49, 49);
+                color: rgb(0, 0, 0);
                 // right: -110%;
                 // translate: X -220px;
                 padding: 5px;
@@ -578,7 +579,7 @@ body {
         }
     }
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 950px) {
         header {
             width: 100%;
             height: 100vh;
@@ -619,6 +620,7 @@ body {
                     justify-content: center;
                     height: 50vh;
                     width: 100%;
+                    max-width: 700px;
                     margin: auto;
                     padding-top: 10px;
                     padding-bottom: 30px;
@@ -627,7 +629,7 @@ body {
 
                     li {
                         width: 80%;
-                    margin: auto;
+                        margin: auto;
                         margin-top: 10px;
                         text-align: center;
                         padding: 5px;
@@ -666,6 +668,7 @@ body {
                     justify-content: center;
                     height: 50vh;
                     width: 100%;
+                    max-width: 700px;
                     margin: auto;
                     padding-top: 10px;
                     padding-bottom: 30px;
@@ -756,49 +759,119 @@ body {
             #plats {
                 width: 95%;
                 margin: auto;
+
                 // border: 2px solid wheat;
-                h2{
+                h2 {
                     width: inherit;
                     font-size: 3rem;
                     padding: 10px;
-                    margin-top: 1em;    
+                    margin-top: 1em;
                 }
-                #p_p{
+
+                #p_p {
                     width: 100%;
                     height: 90vh;
                     overflow: hidden;
-                    #i_plat{
+
+                    #i_plat {
                         width: 100%;
                         height: 100%;
-                        background-size:auto;
+                        background-size: auto;
                         background-repeat: no-repeat;
                     }
                 }
 
             }
-            #menu{
+
+            #menu {
                 width: 95%;
                 margin: auto;
                 margin-top: 2em;
-                h2{
+
+                h2 {
                     padding: 10px;
                     width: inherit;
                     margin-top: 1em;
                 }
-                #_menu{
+
+                #_menu {
                     display: block;
                     width: 100%;
-                    #_jour,#_nuit{
+
+                    #_jour,
+                    #_nuit {
                         width: inherit;
+                        margin-bottom: 2em;
                         border-bottom: 1px solid #c83131;
-                    }
-                    #_jour{
-                        // 
                     }
                 }
             }
 
-            // ligne vert
+            #reservation {
+                width: 95%;
+                display: block;
+                height: auto;
+
+                div {
+                    width: 100%;
+                    h2 {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+                #for_m{
+                    width: 100%;
+                    margin-bottom: 2em;
+                    form{
+                        width: 100%;
+                        display: block;
+                        #f_line,#s_line{
+                            display: block;
+                            width:100%;
+                            label{
+                                font-size: 20px;
+                                width:100%;
+                                padding-top: 0.9em;
+                            }
+                            input{
+                                width: inherit;
+                                width: 100%;
+                            }
+                            
+                        }
+                        #bbt{
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+            // message
+            #thnks{
+                width: 100%;
+                h2{
+                    font-size: 50px;
+                }
+            }
+            #contact{
+                width: 95%;
+                margin: auto;
+                h2{
+                    width: 100%;
+                    font-size: 35px;
+                }
+                #cont{
+                    width: 85%;
+                }
+            }
         }
+            footer{
+                width: 100%;
+                #social_media{
+                    width: 60%;
+                }
+            }
+
+            // ligne vert
+        
     }
 }
