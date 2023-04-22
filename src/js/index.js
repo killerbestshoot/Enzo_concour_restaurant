@@ -119,27 +119,62 @@ document.addEventListener("DOMContentLoaded", () => {
   // evenement sur les menue jour et nuit
   const _j = document.getElementById("_jour");
   const _n = document.getElementById("_nuit");
-  _j.addEventListener("mouseenter", () => {
+  let resizeTimer;
+
+  // Define the event handler functions
+  function handleJourMouseEnter() {
+    // console.log(width_);
     document.getElementById("j_").style.fontSize = "50px";
     _j.style.width = "100%";
     _n.style.display = "none";
-  });
-  _j.addEventListener("mouseleave", () => {
+  }
+
+  function handleJourMouseLeave() {
     document.getElementById("j_").style.fontSize = "30px";
     _n.style.display = "block";
     _j.style.width = "50%";
-  });
+  }
 
-  _n.addEventListener("mouseenter", () => {
+  function handleNuitMouseEnter() {
     document.getElementById("n_").style.fontSize = "50px";
     _n.style.width = "100%";
     _j.style.display = "none";
-  });
-  _n.addEventListener("mouseleave", () => {
+  }
+
+  function handleNuitMouseLeave() {
     document.getElementById("n_").style.fontSize = "30px";
     _j.style.display = "block";
     _n.style.width = "50%";
-  });
+  }
+
+  function toggleEventListeners() {
+    // Clear the previous timeout if it exists
+    clearTimeout(resizeTimer);
+
+    // Set a new timeout to call the function after 250ms
+    resizeTimer = setTimeout(function () {
+      let width_ = window.innerWidth;
+      if (width_ > 700) {
+        // add event listeners and modify element styles
+        _j.addEventListener("mouseenter", handleJourMouseEnter);
+        _j.addEventListener("mouseleave", handleJourMouseLeave);
+        _n.addEventListener("mouseenter", handleNuitMouseEnter);
+        _n.addEventListener("mouseleave", handleNuitMouseLeave);
+      } else {
+        // remove event listeners and modify element styles
+        _j.removeEventListener("mouseenter", handleJourMouseEnter);
+        _j.removeEventListener("mouseleave", handleJourMouseLeave);
+        _n.removeEventListener("mouseenter", handleNuitMouseEnter);
+        _n.removeEventListener("mouseleave", handleNuitMouseLeave);
+      }
+    }, 1000);
+  }
+
+  // Call the function on page load
+  toggleEventListeners();
+
+  // Call the function on window resize
+  window.addEventListener("resize", toggleEventListeners);
 
   const f = document.getElementById("for_m");
   f.addEventListener("mouseenter", () => {
