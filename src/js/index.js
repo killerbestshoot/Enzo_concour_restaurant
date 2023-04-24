@@ -1,3 +1,16 @@
+/* Le code ci-dessus est un script JavaScript qui exécute diverses fonctions sur une page Web. Il
+inclut des écouteurs d'événements pour mouseenter et mouseleave sur les images, modifie l'image
+d'arrière-plan d'une section toutes les 3 secondes, anime l'apparence des éléments lorsque
+l'utilisateur fait défiler la page jusqu'à un certain point et gère les événements de soumission de
+formulaire. Il inclut également des écouteurs d'événements pour mouseenter et mouseleave sur les
+éléments de menu et ajuste la disposition et les styles des éléments en fonction de la largeur de la
+fenêtre. */
+/* The above code is a JavaScript script that performs various functions on a webpage. It includes
+event listeners for mouseenter and mouseleave on images, changes the background image of a section
+every 3 seconds, animates the appearance of elements when the user scrolls to a certain point on the
+page, and handles form submission events. It also includes event listeners for mouseenter and
+mouseleave on menu items and adjusts the layout and styles of elements based on the width of the
+viewport. */
 document.addEventListener("DOMContentLoaded", () => {
   let image = document.querySelectorAll(".i"); // Récupérer l'élément image
   const header = document.querySelector("header");

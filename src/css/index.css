@@ -14,7 +14,6 @@ body {
 }
 body header {
   height: 100vh;
-  padding: 5px;
   background-image: url(../assets/image1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,19 +23,18 @@ body header nav {
   top: 0;
   height: 6em;
   padding: 10px;
-  margin-top: 0.8em;
-  display: flex;
-  justify-content: space-between;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 body header nav ul {
+  width: 45%;
+  margin-right: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
-  margin-right: 2em;
 }
 body header nav ul li {
   list-style: none;
@@ -66,20 +64,19 @@ body main #sec_nav {
   top: 0;
   height: 4em;
   padding: 10px;
-  margin-top: 0.8em;
-  display: flex;
   z-index: 50;
-  justify-content: space-between;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 body main #sec_nav ul {
+  width: 45%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
-  margin: auto;
 }
 body main #sec_nav ul li {
   list-style: none;
@@ -105,6 +102,7 @@ body main #wwr h1 {
   font-size: 40px;
   margin-bottom: 1.5em;
   margin-top: 1.5em;
+  font-family: "Great Vibes";
 }
 body main #wwr #infous {
   width: 100%;
@@ -209,28 +207,34 @@ body main #wwr #infous #wwr_rs #sign h5 {
 }
 body main #plats {
   width: 70%;
+  height: 100vh;
   margin: auto;
   margin-top: 5em;
   margin-bottom: 5em;
 }
 body main #plats h2 {
-  width: 50%;
+  width: 80%;
+  padding: 10px;
   margin: auto;
   text-align: center;
   font-size: 70px;
   font-family: "Great Vibes", cursive;
-  margin-bottom: 1.5em;
 }
 body main #plats #p_p {
-  width: 100%;
+  width: 80%;
+  height: 80%;
   overflow: hidden;
+  margin: auto;
 }
 body main #plats #p_p #i_plat {
   width: 100%;
-  background-size: cover;
-  height: 90vh;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
   background-position: center;
-  transition: transform 0.5s easeInOutQuad;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s;
 }
 body main #plats #p_p .zoom {
   transform: scale(1.1);
@@ -303,6 +307,66 @@ body main #menu #_menu #_nuit:hover {
   box-shadow: #fff 0px 0px 10px 0px;
   background-color: rgba(37, 36, 36, 0.318);
 }
+body main #horaire {
+  width: 70%;
+  height: 60vh;
+  margin: auto;
+  display: flex;
+  padding: 5px;
+  margin-top: 5em;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(187, 49, 49);
+}
+body main #horaire #hr {
+  width: 100%;
+  padding: 10px;
+  font-family: "Great Vibes";
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+body main #horaire h2 {
+  width: 100%;
+  padding: 10px;
+  font-family: "Great Vibes";
+  font-size: 30px;
+  text-align: center;
+}
+body main #horaire ul {
+  width: 100%;
+  padding: 5px;
+  flex-grow: 1;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #horaire ul li {
+  padding: 5px;
+  list-style: none;
+  width: 14.2857142857%;
+  height: 100%;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 6px;
+  border: rgba(187, 49, 49, 0) 2px solid;
+}
+body main #horaire ul li div {
+  font-size: 18px;
+  height: 20%;
+}
+body main #horaire ul li div h3 {
+  font-family: "Great Vibes";
+}
+body main #horaire ul li:hover {
+  background-color: #3b3b3b;
+  border: rgb(187, 49, 49) 2px solid;
+}
+body main #horaire ul:hover {
+  border-radius: 6px;
+  background-color: rgba(80, 79, 79, 0.6392156863);
+}
 body main #reservation {
   width: 70%;
   margin: auto;
@@ -323,6 +387,7 @@ body main #reservation h2 {
 body main #reservation #for_m {
   background-image: url(../assets/Dining.jpg);
   background-size: cover;
+  background-position: center;
   width: 100%;
   z-index: 50;
   padding: 10px;
@@ -415,6 +480,7 @@ body main #thnks {
   overflow: -moz-hidden-unscrollable;
   background-image: url(../assets/aa7d3f_e5c6a0f393fa453cba375d4d3d47bdef~mv2.webp);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 body main #thnks h2 {
@@ -713,12 +779,77 @@ body footer #social_media ul li #_tik {
   }
   body main #menu #_menu #_jour,
   body main #menu #_menu #_nuit {
+    max-width: 550px;
+    margin: auto;
     width: inherit;
     margin-bottom: 2em;
     border-bottom: 1px solid #c83131;
   }
+  body main #horaire {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 5px;
+    margin-top: 5em;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(187, 49, 49);
+  }
+  body main #horaire #hr {
+    width: 100%;
+    padding: 10px;
+    font-family: "Great Vibes";
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  body main #horaire h2 {
+    width: 100%;
+    padding: 10px;
+    font-family: "Great Vibes";
+    font-size: 30px;
+    text-align: center;
+  }
+  body main #horaire ul {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    padding: 5px;
+    flex-grow: 1;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body main #horaire ul li {
+    padding: 5px;
+    list-style: none;
+    width: 90%;
+    margin: auto;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 6px;
+    border: rgba(187, 49, 49, 0) 2px solid;
+  }
+  body main #horaire ul li div {
+    font-size: 18px;
+    padding: 2px;
+    margin-top: 0.2em;
+  }
+  body main #horaire ul li div h3 {
+    visibility: hidden;
+  }
+  body main #horaire ul li:hover {
+    background-color: #3b3b3b;
+    border: rgb(187, 49, 49) 2px solid;
+  }
+  body main #horaire ul:hover {
+    border-radius: 6px;
+    background-color: rgba(80, 79, 79, 0.6392156863);
+  }
   body main #reservation {
     width: 95%;
+    max-width: 550px;
     display: block;
     height: auto;
   }
@@ -737,16 +868,18 @@ body footer #social_media ul li #_tik {
     width: 100%;
     display: block;
   }
-  body main #reservation #for_m form #f_line, body main #reservation #for_m form #s_line {
+  body main #reservation #for_m form #f_line,
+  body main #reservation #for_m form #s_line {
     display: block;
     width: 100%;
   }
-  body main #reservation #for_m form #f_line label, body main #reservation #for_m form #s_line label {
-    font-size: 20px;
+  body main #reservation #for_m form #f_line label,
+  body main #reservation #for_m form #s_line label {
     width: 100%;
     padding-top: 0.9em;
   }
-  body main #reservation #for_m form #f_line input, body main #reservation #for_m form #s_line input {
+  body main #reservation #for_m form #f_line input,
+  body main #reservation #for_m form #s_line input {
     width: inherit;
     width: 100%;
   }
@@ -754,6 +887,7 @@ body footer #social_media ul li #_tik {
     width: 95%;
   }
   body main #thnks {
+    margin-top: 2em;
     width: 100%;
   }
   body main #thnks h2 {
