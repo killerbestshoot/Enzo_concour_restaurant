@@ -89,6 +89,7 @@ body main #sec_nav ul li a {
 }
 body main #wwr {
   width: 80%;
+  max-width: 1280px;
   height: 100vh;
   margin: auto;
   margin-bottom: 2em;
@@ -892,6 +893,7 @@ body footer #social_media ul li #_tik {
   }
   body main #thnks h2 {
     font-size: 50px;
+    color: red;
   }
   body main #contact {
     width: 95%;

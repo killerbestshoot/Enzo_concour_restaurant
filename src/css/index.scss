@@ -112,6 +112,7 @@ body {
         // section qui sommes nous
         #wwr {
             width: 80%;
+            max-width: 1280px;
             height: 100vh;
             margin: auto;
             margin-bottom: 2em;
@@ -1010,6 +1011,7 @@ body {
 
                 h2 {
                     font-size: 50px;
+                    color: red;
                 }
             }
 
