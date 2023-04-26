@@ -6,12 +6,66 @@ formulaire. Il inclut également des écouteurs d'événements pour mouseenter e
 éléments de menu et ajuste la disposition et les styles des éléments en fonction de la largeur de la
 fenêtre. */
 document.addEventListener("DOMContentLoaded", () => {
+  getDateTime();
+  setTimeout(makeItVisible, 3000);
+  // makeItVisible();
   let image = document.querySelectorAll(".i"); // Récupérer l'élément image
   const header = document.querySelector("header");
   const hiddenElement = document.getElementById("sec_nav");
   document.getElementById("f_line").style.visibility = "hidden";
   document.getElementById("s_line").style.visibility = "hidden";
   document.getElementById("bbt").style.visibility = "hidden";
+
+  /**
+   * La fonction obtient la date et l'heure actuelles au format français et affiche un message
+   * d'accueil et de bienvenue sur une page Web.
+   */
+  function getDateTime() {
+    let date = new Date();
+    let jour = date.toLocaleString("fr-FR", { weekday: "long" });
+    let month = date.toLocaleString("fr-FR", { month: "long" });
+    let heure = date.toLocaleString("fr-FR", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    });
+    let minutes = date.getMinutes();
+
+    if (date.getHours() >= 5 && date.getHours() < 18) {
+      document.getElementById("salutation").innerHTML = "Bonjour";
+    } else {
+      document.getElementById("salutation").innerHTML = "Bonsoir";
+    }
+
+    document.getElementById("welcomtxt").innerHTML =
+      "Aujourd'hui, nous sommes " +
+      jour +
+      " " +
+      date.getDate() +
+      " " +
+      month +
+      " et il est " +
+      heure;
+  }
+  function makeItVisible() {
+    const dt = document.getElementById("dateTime");
+    const animation = anime({
+      targets: dt,
+      translateX: 0,
+      duration: 2500,
+      easing: "easeOutQuad",
+      autoplay: true,
+      complete: () => {
+        const animations = anime({
+          targets: dt,
+          translateX: 100,
+          duration: 2500,
+          easing: "easeOutQuad",
+          autoplay: true,
+        });
+      },
+    });
+  }
 
   // changer l'affichage du nav bar
   window.addEventListener("scroll", () => {
