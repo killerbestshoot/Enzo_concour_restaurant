@@ -995,28 +995,35 @@ body footer #social_media ul li #_tik {
   }
   body main #wwr #infous #wwr_rs, body main #wwr #infous #wwr_p, body main #wwr #infous #wwr_t {
     width: 100%;
-    height: 410px;
+    height: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  body main #plats {
+  body main #wwr #infous #wwr_rs h2, body main #wwr #infous #wwr_p h2, body main #wwr #infous #wwr_t h2 {
+    display: none;
+  }
+  body main #wwr #infous #wwr_rs #img_rest, body main #wwr #infous #wwr_p #img_rest, body main #wwr #infous #wwr_t #img_rest {
+    width: 30%;
+    height: 100%;
+  }
+  body main #wwr #plats {
     width: 95%;
     margin: auto;
   }
-  body main #menu {
+  body main #wwr #menu {
     width: 95%;
     margin: auto;
   }
-  body main #horaire {
+  body main #wwr #horaire {
     width: 95%;
     margin: auto;
   }
-  body main #reservation {
+  body main #wwr #reservation {
     width: 95%;
     margin: auto;
   }
-  body main #message {
+  body main #wwr #message {
     width: 95%;
     margin: auto;
   }
