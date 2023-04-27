@@ -199,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       targets: dt,
       translateX: 0,
       duration: 3500,
+      opacity: 1,
       easing: "easeOutQuad",
       autoplay: true,
       complete: () => {
@@ -283,13 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
     });
-  }
-  function handleScroll(sectionMiddle) {
-    const scrollPosition = window.pageYOffset + window.innerHeight;
-    if (scrollPosition > sectionMiddle) {
-      animation.play();
-      window.removeEventListener("scroll", handleScroll); // supprimez l'écouteur d'événement
-    }
   }
   function toggleEventListeners() {
     // suppression du premier timeOut s'il est deja existant
