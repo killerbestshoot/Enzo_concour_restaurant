@@ -989,51 +989,179 @@ body footer #social_media ul li #_tik {
     width: 70%;
     height: auto;
     margin: auto;
+    max-width: 900px;
+    min-width: 890px;
   }
   body main #wwr #infous {
     display: block;
   }
-  body main #wwr #infous #wwr_rs, body main #wwr #infous #wwr_p, body main #wwr #infous #wwr_t {
+  body main #wwr #infous #wwr_rs,
+  body main #wwr #infous #wwr_p,
+  body main #wwr #infous #wwr_t {
     width: 100%;
     height: 400px;
     padding: 0;
+    margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  body main #wwr #infous #wwr_rs h2, body main #wwr #infous #wwr_p h2, body main #wwr #infous #wwr_t h2 {
+  body main #wwr #infous #wwr_rs h2,
+  body main #wwr #infous #wwr_p h2,
+  body main #wwr #infous #wwr_t h2 {
     display: none;
   }
-  body main #wwr #infous #wwr_rs #img_rest, body main #wwr #infous #wwr_p #img_rest, body main #wwr #infous #wwr_t #img_rest {
+  body main #wwr #infous #wwr_rs #img_rest,
+  body main #wwr #infous #wwr_p #img_rest,
+  body main #wwr #infous #wwr_t #img_rest {
     width: 40%;
     height: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: #fff 2px solid;
   }
-  body main #wwr #infous #wwr_rs p, body main #wwr #infous #wwr_p p, body main #wwr #infous #wwr_t p {
-    padding: 10px;
-    border: #fff 2px solid;
+  body main #wwr #infous #wwr_rs #img_rest .i,
+  body main #wwr #infous #wwr_p #img_rest .i,
+  body main #wwr #infous #wwr_t #img_rest .i {
+    width: 100%;
+    height: 100%;
+  }
+  body main #wwr #infous #wwr_rs p,
+  body main #wwr #infous #wwr_p p,
+  body main #wwr #infous #wwr_t p {
+    padding: 30px;
     width: 60%;
   }
-  body main #wwr #plats {
-    width: 95%;
+  body main #wwr #infous #wwr_rs #presentation,
+  body main #wwr #infous #wwr_rs #presentation_t,
+  body main #wwr #infous #wwr_p #presentation,
+  body main #wwr #infous #wwr_p #presentation_t,
+  body main #wwr #infous #wwr_t #presentation,
+  body main #wwr #infous #wwr_t #presentation_t {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body main #wwr #infous #wwr_rs #presentation #img,
+  body main #wwr #infous #wwr_rs #presentation #img_team,
+  body main #wwr #infous #wwr_rs #presentation_t #img,
+  body main #wwr #infous #wwr_rs #presentation_t #img_team,
+  body main #wwr #infous #wwr_p #presentation #img,
+  body main #wwr #infous #wwr_p #presentation #img_team,
+  body main #wwr #infous #wwr_p #presentation_t #img,
+  body main #wwr #infous #wwr_p #presentation_t #img_team,
+  body main #wwr #infous #wwr_t #presentation #img,
+  body main #wwr #infous #wwr_t #presentation #img_team,
+  body main #wwr #infous #wwr_t #presentation_t #img,
+  body main #wwr #infous #wwr_t #presentation_t #img_team {
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  body main #wwr #infous #wwr_rs #presentation #img .i,
+  body main #wwr #infous #wwr_rs #presentation #img_team .i,
+  body main #wwr #infous #wwr_rs #presentation_t #img .i,
+  body main #wwr #infous #wwr_rs #presentation_t #img_team .i,
+  body main #wwr #infous #wwr_p #presentation #img .i,
+  body main #wwr #infous #wwr_p #presentation #img_team .i,
+  body main #wwr #infous #wwr_p #presentation_t #img .i,
+  body main #wwr #infous #wwr_p #presentation_t #img_team .i,
+  body main #wwr #infous #wwr_t #presentation #img .i,
+  body main #wwr #infous #wwr_t #presentation #img_team .i,
+  body main #wwr #infous #wwr_t #presentation_t #img .i,
+  body main #wwr #infous #wwr_t #presentation_t #img_team .i {
+    width: 100%;
+    height: 100%;
+  }
+  body main #wwr #infous #wwr_rs #presentation #memo,
+  body main #wwr #infous #wwr_rs #presentation #memo_team,
+  body main #wwr #infous #wwr_rs #presentation_t #memo,
+  body main #wwr #infous #wwr_rs #presentation_t #memo_team,
+  body main #wwr #infous #wwr_p #presentation #memo,
+  body main #wwr #infous #wwr_p #presentation #memo_team,
+  body main #wwr #infous #wwr_p #presentation_t #memo,
+  body main #wwr #infous #wwr_p #presentation_t #memo_team,
+  body main #wwr #infous #wwr_t #presentation #memo,
+  body main #wwr #infous #wwr_t #presentation #memo_team,
+  body main #wwr #infous #wwr_t #presentation_t #memo,
+  body main #wwr #infous #wwr_t #presentation_t #memo_team {
+    width: 60%;
+  }
+  body main #wwr #infous #wwr_rs #presentation #memo p,
+  body main #wwr #infous #wwr_rs #presentation #memo_team p,
+  body main #wwr #infous #wwr_rs #presentation_t #memo p,
+  body main #wwr #infous #wwr_rs #presentation_t #memo_team p,
+  body main #wwr #infous #wwr_p #presentation #memo p,
+  body main #wwr #infous #wwr_p #presentation #memo_team p,
+  body main #wwr #infous #wwr_p #presentation_t #memo p,
+  body main #wwr #infous #wwr_p #presentation_t #memo_team p,
+  body main #wwr #infous #wwr_t #presentation #memo p,
+  body main #wwr #infous #wwr_t #presentation #memo_team p,
+  body main #wwr #infous #wwr_t #presentation_t #memo p,
+  body main #wwr #infous #wwr_t #presentation_t #memo_team p {
+    width: 90%;
     margin: auto;
   }
-  body main #wwr #menu {
-    width: 95%;
-    margin: auto;
+  body main #wwr #infous #wwr_rs #presentation #memo .sign950,
+  body main #wwr #infous #wwr_rs #presentation #memo_team .sign950,
+  body main #wwr #infous #wwr_rs #presentation_t #memo .sign950,
+  body main #wwr #infous #wwr_rs #presentation_t #memo_team .sign950,
+  body main #wwr #infous #wwr_p #presentation #memo .sign950,
+  body main #wwr #infous #wwr_p #presentation #memo_team .sign950,
+  body main #wwr #infous #wwr_p #presentation_t #memo .sign950,
+  body main #wwr #infous #wwr_p #presentation_t #memo_team .sign950,
+  body main #wwr #infous #wwr_t #presentation #memo .sign950,
+  body main #wwr #infous #wwr_t #presentation #memo_team .sign950,
+  body main #wwr #infous #wwr_t #presentation_t #memo .sign950,
+  body main #wwr #infous #wwr_t #presentation_t #memo_team .sign950 {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
   }
-  body main #wwr #horaire {
-    width: 95%;
-    margin: auto;
+  body main #wwr #infous #wwr_rs #presentation #sign,
+  body main #wwr #infous #wwr_rs #presentation_t #sign,
+  body main #wwr #infous #wwr_p #presentation #sign,
+  body main #wwr #infous #wwr_p #presentation_t #sign,
+  body main #wwr #infous #wwr_t #presentation #sign,
+  body main #wwr #infous #wwr_t #presentation_t #sign {
+    display: none;
   }
-  body main #wwr #reservation {
+  body main #plats {
     width: 95%;
     margin: auto;
+    height: auto;
+    max-width: 900px;
   }
-  body main #wwr #message {
+  body main #menu {
     width: 95%;
     margin: auto;
+    height: auto;
+    max-width: 900px;
+  }
+  body main #horaire {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    max-width: 900px;
+  }
+  body main #reservation {
+    width: 95%;
+    margin: auto;
+    height: auto;
+    max-width: 900px;
+  }
+  body main #reservation #for_m {
+    margin-bottom: 1em;
+  }
+  body main #reservation #for_m form #f_line {
+    width: 100%;
+  }
+  body main #message {
+    width: 95%;
+    margin: auto;
+    height: auto;
+    max-width: 900px;
   }
 }/*# sourceMappingURL=index.css.map */
