@@ -996,6 +996,7 @@ body footer #social_media ul li #_tik {
   body main #wwr #infous #wwr_rs, body main #wwr #infous #wwr_p, body main #wwr #infous #wwr_t {
     width: 100%;
     height: 400px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1004,8 +1005,16 @@ body footer #social_media ul li #_tik {
     display: none;
   }
   body main #wwr #infous #wwr_rs #img_rest, body main #wwr #infous #wwr_p #img_rest, body main #wwr #infous #wwr_t #img_rest {
-    width: 30%;
+    width: 40%;
     height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: #fff 2px solid;
+  }
+  body main #wwr #infous #wwr_rs p, body main #wwr #infous #wwr_p p, body main #wwr #infous #wwr_t p {
+    padding: 10px;
+    border: #fff 2px solid;
+    width: 60%;
   }
   body main #wwr #plats {
     width: 95%;
